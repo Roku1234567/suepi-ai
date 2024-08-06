@@ -15,7 +15,9 @@
     "lint": "run-p lint:*",
     "lint:client": "npm run lint:fix --prefix client",
     "lint:server": "npm run lint:fix --prefix server",
-    "start": "npm start --prefix server",
+    "start": "run-p start:*",
+    "start:client": "npm start --prefix client",
+    "start:server": "npm start --prefix server",
     "test": "run-p test:*",
     "test:client": "npm run test --prefix client",
     "test:server": "npm run test --prefix server",
@@ -24,6 +26,7 @@
     "typecheck:server": "npm run typecheck --prefix server"
   },
   "devDependencies": {
+    "@types/dompurify": "^3.0.5",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
     "@vitest/coverage-v8": "^1.6.0",
@@ -43,5 +46,9 @@
   },
   "engines": {
     "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "dompurify": "^3.1.6",
+    "yup": "^1.4.0"
   }
 }

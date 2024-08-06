@@ -8,6 +8,7 @@
     "dev:aspida": "aspida --watch",
     "dev:path": "pathpida --ignorePath .gitignore -s -w",
     "build": "npm run generate && next build",
+    "start": "sh -c \"next start -p $(($PORT + 1))\"",
     "lint": "run-p lint:js lint:prettier lint:style",
     "lint:js": "eslint --ext .ts,.tsx,.js --ignore-path .gitignore .",
     "lint:prettier": "prettier --check \"./**/*.{ts,tsx,js}\" --ignore-path .gitignore",
@@ -28,17 +29,19 @@
     "aspida": "^1.14.0",
     "aws-amplify": "^6.3.6",
     "axios": "^1.6.8",
+    "dompurify": "^3.1.6",
     "jotai": "^2.8.0",
     "next": "^14.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-use-websocket": "^4.8.1",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
     "dotenv": "^16.4.5",
-    "happy-css-modules": "^2.1.2",
+    "happy-css-modules": "^3.1.1",
     "notios": "^0.4.1",
     "pathpida": "^0.22.0"
   },
